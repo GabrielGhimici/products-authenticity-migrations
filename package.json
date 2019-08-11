@@ -1,0 +1,25 @@
+{
+  "name": "products-authenticity-migrations",
+  "version": "1.0.0",
+  "description": "Products authenticity application's migrations.",
+  "main": "index.js",
+  "scripts": {
+    "migration:build": "rimraf ./dist && tsc -p tsconfig.json",
+    "migration:run": "npm run migration:build && ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create"
+  },
+  "author": "Gabriel Ghimici",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "mysql": "^2.17.1",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.3.0",
+    "typeorm": "^0.2.18",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.1"
+  }
+}
