@@ -6,8 +6,10 @@
   "scripts": {
     "migration:build": "rimraf ./dist && tsc -p tsconfig.json",
     "migration:run": "npm run migration:build && ts-node ./node_modules/typeorm/cli.js migration:run",
-    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
-    "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create"
+    "migration:revert": "npm run migration:build && ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create",
+    "lint": "tslint --project tsconfig.json",
+    "lint:fix": "tslint --project tsconfig.json --fix"
   },
   "author": "Gabriel Ghimici",
   "license": "MIT",
@@ -20,6 +22,13 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
-    "@types/node": "^12.7.1"
+    "@types/node": "^12.7.1",
+    "husky": "^3.0.3",
+    "tslint": "^5.18.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
