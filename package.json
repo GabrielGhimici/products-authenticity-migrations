@@ -6,7 +6,7 @@
   "scripts": {
     "migration:build": "rimraf ./dist && tsc -p tsconfig.json",
     "migration:run": "npm run migration:build && ts-node ./node_modules/typeorm/cli.js migration:run",
-    "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "migration:revert": "npm run migration:build && ts-node ./node_modules/typeorm/cli.js migration:revert",
     "migration:create": "ts-node ./node_modules/typeorm/cli.js migration:create",
     "lint": "tslint --project tsconfig.json",
     "lint:fix": "tslint --project tsconfig.json --fix"

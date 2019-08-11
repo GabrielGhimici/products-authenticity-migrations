@@ -12,14 +12,14 @@ export class AddUserTable1565533776981 implements MigrationInterface {
           username varchar(100) not null,
           password varchar(100) not null,
           salt varchar(7) not null,
-          parent_entity int(10) unsigned null,
+          parent_entity_id int(10) unsigned null,
           blockchain_account varchar(250) not null,
           status enum('enabled', 'disabled', 'deleted') not null,
           createdAt timestamp not null default current_timestamp,
           updatedAt timestamp not null default current_timestamp,
           primary key (id),
           index (email),
-          index (parent_entity)
+          index (parent_entity_id)
         )`
       );
     }
