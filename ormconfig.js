@@ -10,7 +10,7 @@ module.exports = {
    "password": process.env.DB_PASS,
    "database": process.env.DB_DATABASE,
    "migrations": [
-     "dist/migrations/*.js"
+     "dist/migrations/**/*.js"
    ],
    "cli": {
      "migrationsDir": "migrations"
