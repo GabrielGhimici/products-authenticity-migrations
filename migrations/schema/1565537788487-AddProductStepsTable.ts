@@ -4,7 +4,7 @@ export class AddProductStepsTable1565537788487 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<any> {
       await queryRunner.query(
-        `create table production_steps (
+        `create table production_step (
           id int(10) unsigned not null auto_increment,
           id_type int(10) unsigned not null,
           name varchar(100) not null,
