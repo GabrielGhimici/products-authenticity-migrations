@@ -9,7 +9,7 @@ export class AddEntityTable1565535078983 implements MigrationInterface {
           name varchar(100) not null,
           type enum('seller','provider') not null,
           description varchar(500) null,
-          legal_identificator varchar(100) not null,
+          legal_identifier varchar(100) not null,
           status enum('enabled', 'disabled', 'deleted') not null,
           createdAt timestamp not null default current_timestamp,
           updatedAt timestamp not null default current_timestamp,
