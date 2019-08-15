@@ -14,7 +14,8 @@ export class AddGodUser1565556061571 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<any> {
       await queryRunner.query(
-        ``
+        `delete from user
+        where email = 'master.account@gmail.com'`
       );
     }
 
