@@ -15,7 +15,7 @@ export class AddEntityTable1565535078983 implements MigrationInterface {
           updatedAt timestamp not null default current_timestamp,
           primary key (id),
           index (name),
-          index (legal_identificator)
+          index (legal_identifier)
         )`
       );
     }
