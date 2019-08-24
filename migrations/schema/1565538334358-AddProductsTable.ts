@@ -9,7 +9,7 @@ export class AddProductsTable1565538334358 implements MigrationInterface {
           id_type int(10) unsigned not null,
           name varchar(100) not null,
           production_date timestamp not null,
-          validity_term_quanity int(4) unsigned null,
+          validity_term_quantity int(4) unsigned null,
           validity_term_unit enum('hour', 'day', 'month', 'year', 'all') not null,
           status enum('in_stock', 'delivered', 'deleted') not null,
           createdAt timestamp not null default current_timestamp,
