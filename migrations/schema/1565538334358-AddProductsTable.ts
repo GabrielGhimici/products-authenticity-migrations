@@ -11,7 +11,7 @@ export class AddProductsTable1565538334358 implements MigrationInterface {
           production_date timestamp not null,
           validity_term_quantity int(4) unsigned null,
           validity_term_unit enum('hour', 'day', 'month', 'year', 'all') not null,
-          status enum('in_stock', 'delivered', 'deleted') not null,
+          status enum('in_stock', 'delivered', 'producing', 'deleted') not null,
           createdAt timestamp not null default current_timestamp,
           updatedAt timestamp not null default current_timestamp,
           primary key (id),

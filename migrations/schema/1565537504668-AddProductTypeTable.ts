@@ -6,7 +6,7 @@ export class AddProductTypeTable1565537504668 implements MigrationInterface {
       await queryRunner.query(
         `create table product_type (
           id int(10) unsigned not null auto_increment,
-          name varchar(100) not null,
+          name varchar(100) unique not null,
           description varchar(500) null,
           status enum('enabled', 'disabled', 'deleted') not null,
           createdAt timestamp not null default current_timestamp,
